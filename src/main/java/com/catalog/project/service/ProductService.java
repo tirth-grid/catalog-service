@@ -40,5 +40,15 @@ public class ProductService {
         }
         return result;
     }
+
+    public List<String> getAllProductIds() {
+        List<String> productIds = new ArrayList<>();
+        for (Product product : productList) {
+            if (product.getUniqId() != null) {
+                productIds.add(product.getUniqId());
+            }
+        }
+        return productIds;
+    }
 }
 

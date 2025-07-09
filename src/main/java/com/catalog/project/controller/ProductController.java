@@ -20,6 +20,11 @@ public class ProductController {
         return productService.getAllProducts();
     }
 
+    @GetMapping("/ids")
+    public List<String> getAllProductIds() {
+        return productService.getAllProductIds();
+    }
+
     @GetMapping("/{uniqId}")
     public Product getByUniqId(@PathVariable String uniqId) {
         return productService.getByUniqId(uniqId);
